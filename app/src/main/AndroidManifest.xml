@@ -47,7 +47,7 @@
         <!-- Accessibility Service for foreground app detection -->
         <service
             android:name=".service.ZenPauseAccessibilityService"
-            android:exported="false"
+            android:exported="true"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService" />
@@ -66,7 +66,7 @@
         <!-- Boot Receiver -->
         <receiver
             android:name=".service.BootReceiver"
-            android:exported="false">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>

@@ -22,7 +22,16 @@ class OverlayForegroundService : Service() {
     override fun onCreate() {
         super.onCreate()
         createNotificationChannel()
-        startForeground(NOTIFICATION_ID, buildNotification())
+        
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+            startForeground(
+                NOTIFICATION_ID, 
+                buildNotification(), 
+                android.content.pm.ServiceInfo.FOREGROUND_SERVICE_TYPE_SPECIAL_USE
+            )
+        } else {
+            startForeground(NOTIFICATION_ID, buildNotification())
+        }
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {

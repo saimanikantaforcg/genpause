@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/overlay_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/overlay_background"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="32dp">
+
+            <!-- Branding -->
+            <TextView
+                android:id="@+id/tvBranding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/overlay_branding"
+                android:textColor="@color/zen_text_secondary"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.15"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Breathing Ring (Custom View) -->
+            <com.genpause.app.overlay.BreathingRingView
+                android:id="@+id/breathingRing"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Countdown -->
+            <TextView
+                android:id="@+id/tvCountdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textColor="@color/zen_primary"
+                android:textSize="48sp"
+                android:fontFamily="sans-serif-bold"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Prompt Text -->
+            <TextView
+                android:id="@+id/tvPrompt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Take a breath..."
+                android:textColor="@color/zen_text_primary"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-medium"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Stat Line -->
+            <TextView
+                android:id="@+id/tvStat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Attempt #1 today"
+                android:textColor="@color/zen_text_secondary"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Reason Input (Hard Mode — hidden by default) -->
+            <EditText
+                android:id="@+id/etReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/overlay_reason_hint"
+                android:textColor="@color/zen_text_primary"
+                android:textColorHint="@color/zen_text_secondary"
+                android:textSize="15sp"
+                android:background="@color/zen_elevated_surface"
+                android:padding="16dp"
+                android:inputType="text"
+                android:maxLines="2"
+                android:visibility="gone"
+                android:layout_marginBottom="24dp"
+                android:importantForAutofill="no" />
+
+            <!-- Math Puzzle Input (hidden by default) -->
+            <LinearLayout
+                android:id="@+id/mathPuzzleContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:gravity="center"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:id="@+id/tvMathPuzzle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14 + 27 = ?"
+                    android:textColor="@color/zen_primary"
+                    android:textSize="24sp"
+                    android:fontFamily="sans-serif-bold"
+                    android:layout_marginBottom="12dp" />
+
+                <EditText
+                    android:id="@+id/etMathAnswer"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Answer"
+                    android:textColor="@color/zen_text_primary"
+                    android:textColorHint="@color/zen_text_secondary"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:background="@color/zen_elevated_surface"
+                    android:padding="12dp"
+                    android:inputType="number"
+                    android:importantForAutofill="no" />
+            </LinearLayout>
+
+            <!-- Reflection Options (hidden by default) -->
+            <LinearLayout
+                android:id="@+id/reflectionContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:id="@+id/tvReflectionQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Why are you opening this app?"
+                    android:textColor="@color/zen_text_primary"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Reflection options will be added programmatically -->
+            </LinearLayout>
+
+            <!-- Emotion Tracking (shown after decision, hidden by default) -->
+            <LinearLayout
+                android:id="@+id/emotionContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tvEmotionPrompt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/emotion_prompt"
+                    android:textColor="@color/zen_text_secondary"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:id="@+id/emotionChips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/chipAnxious"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:text="@string/emotion_anxious"
+                        android:textColor="@color/zen_text_primary"
+                        android:textSize="13sp"
+                        android:background="@color/zen_elevated_surface"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:layout_marginEnd="6dp"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:id="@+id/chipHappy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:text="@string/emotion_happy"
+                        android:textColor="@color/zen_text_primary"
+                        android:textSize="13sp"
+                        android:background="@color/zen_elevated_surface"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:layout_marginEnd="6dp"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:id="@+id/chipTired"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:text="@string/emotion_tired"
+                        android:textColor="@color/zen_text_primary"
+                        android:textSize="13sp"
+                        android:background="@color/zen_elevated_surface"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:layout_marginEnd="6dp"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:id="@+id/chipBored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:text="@string/emotion_bored"
+                        android:textColor="@color/zen_text_primary"
+                        android:textSize="13sp"
+                        android:background="@color/zen_elevated_surface"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:clickable="true"
+                        android:focusable="true" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Intention Duration (shown when "Continue" is tapped, hidden by default) -->
+            <LinearLayout
+                android:id="@+id/intentionContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tvIntentionPrompt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/intention_prompt"
+                    android:textColor="@color/zen_text_secondary"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btn5min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:text="@string/intention_5min"
+                        android:textColor="@color/zen_text_primary"
+                        android:textSize="14sp"
+                        android:background="@color/zen_elevated_surface"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:id="@+id/btn15min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:text="@string/intention_15min"
+                        android:textColor="@color/zen_text_primary"
+                        android:textSize="14sp"
+                        android:background="@color/zen_elevated_surface"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:id="@+id/btn30min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:text="@string/intention_30min"
+                        android:textColor="@color/zen_text_primary"
+                        android:textSize="14sp"
+                        android:background="@color/zen_elevated_surface"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:clickable="true"
+                        android:focusable="true" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Decision Buttons Container (hidden during countdown) -->
+            <LinearLayout
+                android:id="@+id/buttonsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:gravity="center_horizontal">
+
+                <!-- Open Anyway Button -->
+                <TextView
+                    android:id="@+id/btnOpenAnyway"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center"
+                    android:text="@string/overlay_open_anyway"
+                    android:textColor="@color/zen_text_primary"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:background="@color/overlay_button_open"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginBottom="12dp"
+                    android:contentDescription="Continue to the app" />
+
+                <!-- Back / Cancel Button -->
+                <TextView
+                    android:id="@+id/btnGoBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center"
+                    android:text="@string/overlay_go_back"
+                    android:textColor="@color/zen_background"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-bold"
+                    android:background="@color/overlay_button_back"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginBottom="12dp"
+                    android:contentDescription="Go back and don't open the app" />
+
+                <!-- Snooze Button -->
+                <TextView
+                    android:id="@+id/btnSnooze"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:text="@string/overlay_snooze"
+                    android:textColor="@color/zen_text_secondary"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:background="@color/overlay_button_snooze"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="Snooze for 15 minutes" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

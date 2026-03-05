@@ -1,0 +1,230 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.genpause.app"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="35" />
+10
+11    <!-- Overlay permission to draw over other apps -->
+12    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+12-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:6:5-78
+12-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:6:22-75
+13
+14    <!-- Foreground service for overlay stability -->
+15    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+15-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:9:5-77
+15-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:9:22-74
+16    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+16-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:10:5-89
+16-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:10:22-86
+17    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+17-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:11:5-77
+17-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:11:22-74
+18
+19    <!-- Auto-start after boot (optional) -->
+20    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+20-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:14:5-81
+20-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:14:22-78
+21
+22    <!-- Optional: usage stats for enhanced dashboard -->
+23    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+23-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:17:5-19:47
+23-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:18:9-62
+24
+25    <!-- Query installed apps -->
+26    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+26-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:22:5-23:53
+26-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:22:22-74
+27
+28    <!-- Vibration for haptic feedback -->
+29    <uses-permission android:name="android.permission.VIBRATE" />
+29-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:26:5-66
+29-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:26:22-63
+30
+31    <permission
+31-->[androidx.core:core:1.15.0] C:\Users\SARAGI\.gradle\caches\8.9\transforms\20ad9af86c6afdacae71e568566f3a6c\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+32        android:name="com.genpause.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+32-->[androidx.core:core:1.15.0] C:\Users\SARAGI\.gradle\caches\8.9\transforms\20ad9af86c6afdacae71e568566f3a6c\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+33        android:protectionLevel="signature" />
+33-->[androidx.core:core:1.15.0] C:\Users\SARAGI\.gradle\caches\8.9\transforms\20ad9af86c6afdacae71e568566f3a6c\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+34
+35    <uses-permission android:name="com.genpause.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+35-->[androidx.core:core:1.15.0] C:\Users\SARAGI\.gradle\caches\8.9\transforms\20ad9af86c6afdacae71e568566f3a6c\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+35-->[androidx.core:core:1.15.0] C:\Users\SARAGI\.gradle\caches\8.9\transforms\20ad9af86c6afdacae71e568566f3a6c\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+36
+37    <application
+37-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:28:5-75:19
+38        android:name="com.genpause.app.ZenPauseApp"
+38-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:29:9-36
+39        android:allowBackup="true"
+39-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:30:9-35
+40        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+40-->[androidx.core:core:1.15.0] C:\Users\SARAGI\.gradle\caches\8.9\transforms\20ad9af86c6afdacae71e568566f3a6c\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
+41        android:debuggable="true"
+42        android:extractNativeLibs="false"
+43        android:icon="@mipmap/ic_launcher"
+43-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:31:9-43
+44        android:label="@string/app_name"
+44-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:32:9-41
+45        android:supportsRtl="true"
+45-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:33:9-35
+46        android:theme="@style/Theme.ZenPause" >
+46-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:34:9-46
+47
+48        <!-- Main Activity -->
+49        <activity
+49-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:37:9-45:20
+50            android:name="com.genpause.app.ui.MainActivity"
+50-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:38:13-44
+51            android:exported="true"
+51-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:39:13-36
+52            android:theme="@style/Theme.ZenPause" >
+52-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:40:13-50
+53            <intent-filter>
+53-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:41:13-44:29
+54                <action android:name="android.intent.action.MAIN" />
+54-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:42:17-69
+54-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:42:25-66
+55
+56                <category android:name="android.intent.category.LAUNCHER" />
+56-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:43:17-77
+56-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:43:27-74
+57            </intent-filter>
+58        </activity>
+59
+60        <!-- Accessibility Service for foreground app detection -->
+61        <service
+61-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:48:9-58:19
+62            android:name="com.genpause.app.service.ZenPauseAccessibilityService"
+62-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:49:13-65
+63            android:exported="false"
+63-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:50:13-37
+64            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+64-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:51:13-79
+65            <intent-filter>
+65-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:52:13-54:29
+66                <action android:name="android.accessibilityservice.AccessibilityService" />
+66-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:53:17-92
+66-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:53:25-89
+67            </intent-filter>
+68
+69            <meta-data
+69-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:55:13-57:72
+70                android:name="android.accessibilityservice"
+70-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:56:17-60
+71                android:resource="@xml/accessibility_service_config" />
+71-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:57:17-69
+72        </service>
+73
+74        <!-- Foreground Service for overlay stability -->
+75        <service
+75-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:61:9-64:58
+76            android:name="com.genpause.app.service.OverlayForegroundService"
+76-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:62:13-61
+77            android:exported="false"
+77-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:63:13-37
+78            android:foregroundServiceType="specialUse" />
+78-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:64:13-55
+79
+80        <!-- Boot Receiver -->
+81        <receiver
+81-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:67:9-73:20
+82            android:name="com.genpause.app.service.BootReceiver"
+82-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:68:13-49
+83            android:exported="false" >
+83-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:69:13-37
+84            <intent-filter>
+84-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:70:13-72:29
+85                <action android:name="android.intent.action.BOOT_COMPLETED" />
+85-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:71:17-79
+85-->C:\Users\SARAGI\.gemini\antigravity\scratch\ZenPause\app\src\main\AndroidManifest.xml:71:25-76
+86            </intent-filter>
+87        </receiver>
+88
+89        <provider
+89-->[androidx.emoji2:emoji2:1.3.0] C:\Users\SARAGI\.gradle\caches\8.9\transforms\49a6cd489e3c6e8cfe2ac9175b6f95a0\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+90            android:name="androidx.startup.InitializationProvider"
+90-->[androidx.emoji2:emoji2:1.3.0] C:\Users\SARAGI\.gradle\caches\8.9\transforms\49a6cd489e3c6e8cfe2ac9175b6f95a0\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+91            android:authorities="com.genpause.app.androidx-startup"
+91-->[androidx.emoji2:emoji2:1.3.0] C:\Users\SARAGI\.gradle\caches\8.9\transforms\49a6cd489e3c6e8cfe2ac9175b6f95a0\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+92            android:exported="false" >
+92-->[androidx.emoji2:emoji2:1.3.0] C:\Users\SARAGI\.gradle\caches\8.9\transforms\49a6cd489e3c6e8cfe2ac9175b6f95a0\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+93            <meta-data
+93-->[androidx.emoji2:emoji2:1.3.0] C:\Users\SARAGI\.gradle\caches\8.9\transforms\49a6cd489e3c6e8cfe2ac9175b6f95a0\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+94                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+94-->[androidx.emoji2:emoji2:1.3.0] C:\Users\SARAGI\.gradle\caches\8.9\transforms\49a6cd489e3c6e8cfe2ac9175b6f95a0\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+95                android:value="androidx.startup" />
+95-->[androidx.emoji2:emoji2:1.3.0] C:\Users\SARAGI\.gradle\caches\8.9\transforms\49a6cd489e3c6e8cfe2ac9175b6f95a0\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+96            <meta-data
+96-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\SARAGI\.gradle\caches\8.9\transforms\703791f308fdc0ea1e47c588e7595822\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:29:13-31:52
+97                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+97-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\SARAGI\.gradle\caches\8.9\transforms\703791f308fdc0ea1e47c588e7595822\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:30:17-78
+98                android:value="androidx.startup" />
+98-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\SARAGI\.gradle\caches\8.9\transforms\703791f308fdc0ea1e47c588e7595822\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:31:17-49
+99            <meta-data
+99-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\06dd9255dee05166a5c439a28efd6ea3\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+100                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+100-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\06dd9255dee05166a5c439a28efd6ea3\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+101                android:value="androidx.startup" />
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\06dd9255dee05166a5c439a28efd6ea3\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+102        </provider>
+103
+104        <activity
+104-->[androidx.compose.ui:ui-tooling-android:1.7.6] C:\Users\SARAGI\.gradle\caches\8.9\transforms\8d5959db67a0e6e4a3002a6ea31539cd\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
+105            android:name="androidx.compose.ui.tooling.PreviewActivity"
+105-->[androidx.compose.ui:ui-tooling-android:1.7.6] C:\Users\SARAGI\.gradle\caches\8.9\transforms\8d5959db67a0e6e4a3002a6ea31539cd\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
+106            android:exported="true" />
+106-->[androidx.compose.ui:ui-tooling-android:1.7.6] C:\Users\SARAGI\.gradle\caches\8.9\transforms\8d5959db67a0e6e4a3002a6ea31539cd\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
+107
+108        <service
+108-->[androidx.room:room-runtime:2.6.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\c61f6e29f3d6188caf6cdc054748116f\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+109            android:name="androidx.room.MultiInstanceInvalidationService"
+109-->[androidx.room:room-runtime:2.6.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\c61f6e29f3d6188caf6cdc054748116f\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+110            android:directBootAware="true"
+110-->[androidx.room:room-runtime:2.6.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\c61f6e29f3d6188caf6cdc054748116f\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+111            android:exported="false" />
+111-->[androidx.room:room-runtime:2.6.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\c61f6e29f3d6188caf6cdc054748116f\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+112
+113        <receiver
+113-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\06dd9255dee05166a5c439a28efd6ea3\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+114            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+114-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\06dd9255dee05166a5c439a28efd6ea3\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+115            android:directBootAware="false"
+115-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\06dd9255dee05166a5c439a28efd6ea3\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+116            android:enabled="true"
+116-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\06dd9255dee05166a5c439a28efd6ea3\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+117            android:exported="true"
+117-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\06dd9255dee05166a5c439a28efd6ea3\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+118            android:permission="android.permission.DUMP" >
+118-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\06dd9255dee05166a5c439a28efd6ea3\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+119            <intent-filter>
+119-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\06dd9255dee05166a5c439a28efd6ea3\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+120                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+120-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\06dd9255dee05166a5c439a28efd6ea3\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+120-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\06dd9255dee05166a5c439a28efd6ea3\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+121            </intent-filter>
+122            <intent-filter>
+122-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\06dd9255dee05166a5c439a28efd6ea3\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+123                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+123-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\06dd9255dee05166a5c439a28efd6ea3\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+123-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\06dd9255dee05166a5c439a28efd6ea3\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+124            </intent-filter>
+125            <intent-filter>
+125-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\06dd9255dee05166a5c439a28efd6ea3\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+126                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+126-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\06dd9255dee05166a5c439a28efd6ea3\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+126-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\06dd9255dee05166a5c439a28efd6ea3\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+127            </intent-filter>
+128            <intent-filter>
+128-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\06dd9255dee05166a5c439a28efd6ea3\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+129                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+129-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\06dd9255dee05166a5c439a28efd6ea3\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+129-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\SARAGI\.gradle\caches\8.9\transforms\06dd9255dee05166a5c439a28efd6ea3\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+130            </intent-filter>
+131        </receiver>
+132    </application>
+133
+134</manifest>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ZenPause Dark Neon Palette -->
+    <color name="zen_background">#FF0B0F17</color>
+    <color name="zen_surface">#FF121A26</color>
+    <color name="zen_elevated_surface">#FF182235</color>
+    <color name="zen_primary">#FF00E5FF</color>
+    <color name="zen_secondary">#FFB100FF</color>
+    <color name="zen_accent">#FF00FF85</color>
+    <color name="zen_error">#FFFF4D6D</color>
+    <color name="zen_text_primary">#FFEAF0FF</color>
+    <color name="zen_text_secondary">#FFA8B3CF</color>
+    <color name="zen_divider">#FF26324A</color>
+
+    <!-- Overlay specific -->
+    <color name="overlay_background">#F00B0F17</color>
+    <color name="overlay_card_bg">#FF121A26</color>
+    <color name="overlay_button_open">#FF182235</color>
+    <color name="overlay_button_back">#FF00E5FF</color>
+    <color name="overlay_button_snooze">#FF182235</color>
+
+    <!-- Interaction highlights -->
+    <color name="zen_primary_alpha">#4000E5FF</color>
+</resources>

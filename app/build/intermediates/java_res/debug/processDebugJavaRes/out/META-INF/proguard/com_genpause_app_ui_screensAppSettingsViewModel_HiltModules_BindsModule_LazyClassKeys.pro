@@ -1,0 +1,1 @@
+-keep,allowobfuscation,allowshrinking class com.genpause.app.ui.screens.AppSettingsViewModel

@@ -1,0 +1,3 @@
+-keep,allowobfuscation,allowshrinking class com.genpause.app.ui.screens.AppSettingsViewModel
+-keep,allowobfuscation,allowshrinking class com.genpause.app.ui.screens.AppSettingsViewModel
+-keep,allowobfuscation,allowshrinking class com.genpause.app.ui.screens.DashboardViewModel

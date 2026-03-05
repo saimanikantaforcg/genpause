@@ -1,0 +1,10 @@
+-keep,allowobfuscation,allowshrinking class com.genpause.app.ui.screens.AppSettingsViewModel
+-keep,allowobfuscation,allowshrinking class com.genpause.app.ui.screens.AppSettingsViewModel
+-keep,allowobfuscation,allowshrinking class com.genpause.app.ui.screens.DashboardViewModel
+-keep,allowobfuscation,allowshrinking class com.genpause.app.ui.screens.DashboardViewModel
+-keep,allowobfuscation,allowshrinking class com.genpause.app.ui.screens.FocusBlocksViewModel
+-keep,allowobfuscation,allowshrinking class com.genpause.app.ui.screens.FocusBlocksViewModel
+-keep,allowobfuscation,allowshrinking class com.genpause.app.ui.screens.ManagedAppsViewModel
+-keep,allowobfuscation,allowshrinking class com.genpause.app.ui.screens.ManagedAppsViewModel
+-keep,allowobfuscation,allowshrinking class com.genpause.app.ui.screens.PromptSettingsViewModel
+-keep,allowobfuscation,allowshrinking class com.genpause.app.ui.screens.PromptSettingsViewModel
